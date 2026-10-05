@@ -1,0 +1,17 @@
+{
+  "name": "andrade-live",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ANDRADE — HTML, CSS, JavaScript, WebRTC e WebSocket",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node server/index.mjs",
+    "check": "node --check js/config.js && node --check js/app.js && node --check js/webrtc.js && node --check js/room.js && node --check server/index.mjs"
+  },
+  "dependencies": {
+    "ws": "^8.18.3"
+  }
+}

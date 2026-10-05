@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#050505">
+  <meta name="description" content="ANDRADE. Abra uma sala, envie o link e compartilhe sua tela em tempo real. Sem download e sem cadastro.">
+  <title>ANDRADE — Screenshare</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23050505'/%3E%3Cpath d='M6 25 14 7h4l8 18h-6l-4-10-4 10z' fill='%231687ff'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/config.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body class="home-page">
+  <div class="boot-screen" id="bootScreen" aria-hidden="true"><span class="wordmark">ANDRADE<span class="brand-dot">.</span></span><div class="boot-progress"><i></i></div><span class="mono" id="bootText">INITIALIZING...</span></div>
+  <a class="skip-link" href="#main">Ir para o conteúdo</a>
+  <div class="ambient" aria-hidden="true"><div class="ambient-grid"></div><div class="scanline"></div></div>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="ANDRADE, início"><span class="brand-mark" aria-hidden="true">A</span><span class="wordmark">ANDRADE<span class="brand-dot">.</span></span></a>
+    <nav class="header-nav" aria-label="Navegação principal">
+      <a href="#createRoom" class="nav-rooms">ROOMS <span>/ 01</span></a>
+      <span class="connection-pill" id="homeStatus"><i class="status-dot"></i> ONLINE</span>
+      <button class="text-button" data-open-terms>TERMOS <span class="tiny-plus">+</span></button>
+    </nav>
+  </header>
+  <main id="main" class="home-main">
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="hero-content">
+        <div class="eyebrow"><span class="live-label"><i></i> ANDRADE LIVE</span><span class="eyebrow-rule"></span><span>TRANSMISSÃO</span></div>
+        <h1 id="heroTitle">SCREEN<span class="title-second">SHARE<span class="title-dot">.</span></span></h1>
+        <div class="group-label"><span class="mini-cross" aria-hidden="true">+</span> ANDRADE GROUP <span class="edition">EST. 2026</span></div>
+        <p class="hero-description">Abra uma sala, envie o link e compartilhe<br class="desktop-br"> sua tela em tempo real.</p>
+        <div class="hero-features" aria-label="Vantagens">
+          <span><b>01</b> SEM DOWNLOAD</span><span><b>02</b> SEM CADASTRO</span><span><b>03</b> TEMPO REAL</span>
+        </div>
+        <div class="signal-decoration" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+      </div>
+      <section class="create-card" id="createRoom" aria-labelledby="createTitle">
+        <div class="card-topline"><span>CRIAR SALA</span><span class="step-count">01<span>—03</span></span></div>
+        <div class="card-icon" data-icon="screen" aria-hidden="true"></div>
+        <h2 id="createTitle">Comece uma<br>transmissão<span class="blue">.</span></h2>
+        <p class="card-description">Sua próxima conexão começa aqui.</p>
+        <form id="createForm">
+          <label class="privacy-option" for="privateRoom"><span class="privacy-label"><span data-icon="lock" aria-hidden="true"></span><span>SALA PRIVADA</span></span><span class="switch"><input type="checkbox" id="privateRoom"><span class="switch-track"></span></span></label>
+          <div id="privateFields" class="private-fields" hidden><label class="field-label" for="createPassword">SENHA DA SALA</label><input id="createPassword" type="password" minlength="4" maxlength="64" placeholder="Mínimo de 4 caracteres" autocomplete="new-password"><p class="field-hint">Compartilhe a senha apenas com seus convidados.</p></div>
+          <button class="button button-primary create-button" id="createButton" type="submit"><span data-icon="plus" aria-hidden="true"></span> CRIAR SALA AGORA</button>
+        </form>
+        <div class="join-divider"><span></span><span>JÁ TEM UM CÓDIGO?</span><span></span></div>
+        <form id="joinForm" class="join-form"><label class="sr-only" for="roomCode">Código da sala</label><input id="roomCode" type="text" placeholder="AND-0000" autocomplete="off" maxlength="8" spellcheck="false" required><button class="button button-secondary" type="submit">ENTRAR</button></form>
+        <p class="form-error" id="homeError" role="alert"></p>
+        <div class="card-bottom"><span data-icon="shield" aria-hidden="true"></span><span>Você decide o que compartilhar.</span></div>
+      </section>
+    </section>
+    <section class="workflow-strip" aria-label="Como funciona"><div><span class="workflow-number">01 /</span><p>Crie sua sala<span>Um espaço só seu.</span></p></div><div><span class="workflow-number">02 /</span><p>Convide sua galera<span>É só enviar o link.</span></p></div><div><span class="workflow-number">03 /</span><p>Compartilhe o momento<span>Sua tela, em tempo real.</span></p></div><span class="strip-symbol" aria-hidden="true">✳</span></section>
+  </main>
+  <footer class="site-footer"><span>© 2026 ANDRADE GROUP</span><span class="footer-center">FEITO PARA CONECTAR.</span><span class="footer-end"><i class="status-dot"></i> YOUR SCREEN. YOUR SPACE.</span></footer>
+  <dialog class="modal access-modal" id="accessModal" aria-labelledby="accessTitle"><div class="modal-top"><span class="mono blue">ANDRADE ROOM / ACCESS</span><button class="icon-button" data-close-dialog aria-label="Fechar"><span data-icon="x"></span></button></div><div class="modal-icon" data-icon="login" aria-hidden="true"></div><h2 id="accessTitle">Entrar na sala<span class="blue">.</span></h2><p class="modal-description">Como podemos chamar você?</p><div class="room-code-chip" id="accessCode"></div><form id="accessForm"><label class="field-label" for="nickname">APELIDO</label><input id="nickname" placeholder="Seu nome na sala" maxlength="24" minlength="2" required autocomplete="nickname"><div id="accessPasswordFields" hidden><label class="field-label" for="accessPassword">SENHA</label><input type="password" id="accessPassword" placeholder="Senha da sala" maxlength="64" autocomplete="current-password"></div><p class="form-error" id="accessError" role="alert"></p><button class="button button-primary full-width" type="submit" id="accessSubmit">ENTRAR AGORA</button></form><p class="modal-footnote">Seu microfone e câmera começam desligados.</p></dialog>
+  <dialog class="modal terms-modal" id="termsModal" aria-labelledby="termsTitle"><div class="modal-top"><span class="mono blue">ANDRADE / TERMOS</span><button class="icon-button" data-close-dialog aria-label="Fechar"><span data-icon="x"></span></button></div><h2 id="termsTitle">Seu espaço.<br>Sua responsabilidade.</h2><div class="terms-body"><p>Compartilhe apenas conteúdos que você tem autorização para exibir. Respeite os participantes e não utilize a ANDRADE para atividades ilegais, assédio ou exposição de informações pessoais.</p><h3>Você mantém o controle</h3><p>Tela, câmera e microfone só são ativados após sua ação e a permissão do navegador. Você pode interromper a captura a qualquer momento.</p><h3>Salas e privacidade</h3><p>A mídia utiliza WebRTC, com criptografia durante o transporte. O servidor de conexão, quando configurado, recebe apelidos, mensagens e informações necessárias para conectar a sala. Esta versão não grava as transmissões.</p><h3>Teste local</h3><p>Sem servidor configurado, a interface opera no modo local. Convites entre dispositivos dependem do servidor de conexão. O navegador pode guardar suas preferências e dados temporários da sala neste dispositivo.</p></div><button class="button button-primary full-width" data-close-dialog>ENTENDI</button></dialog>
+  <div class="toast-stack" id="toastStack" role="status" aria-live="polite"></div>
+  <noscript><div class="noscript-message">Ative o JavaScript para criar e acessar salas ANDRADE.</div></noscript>
+</body>
+</html>
